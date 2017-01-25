@@ -1,0 +1,13 @@
+while (viewed.length !== 0) {
+    compared = viewed.pop();
+    for (var i = 1; i <= n; i++) {
+      if (a[compared][i] !== 0) {
+        if (weight[i].price > a[compared][i] + weight[compared].price) {
+          weight[i].price = a[compared][i] + weight[compared].price;
+          weight[i].path = [].concat(weight[compared].path);
+          weight[i].path.push(i);
+          viewed.push(i);
+        }
+      }
+    }
+}

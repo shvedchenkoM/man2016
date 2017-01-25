@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Algorythm visualisation</title>
+
+    <link rel="stylesheet" href="css/amatrix.css" media="screen">
+    <link rel="stylesheet" href="css/main.css" media="screen">
+    <!-- Bootstrap 3 core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/theme.css" media="screen">
+</head>
+
+<body>
+    <div class="navbar-wrapper">
+        <div class="container">
+            <div class="navbar navbar-default navbar-static-top" role="navigation">
+                <nav class="collapse navbar-collapse bs-navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="#about" data-itrans="about"></a>
+                            <li>
+                                <a href="#" id="languageChButton" onclick="controller.changeLanguage()" data-itrans="change language"></a>
+                            </li>
+                        </li>
+                        <li class="dropdown"><a href="#" data-toggle="dropdown" data-itrans="algo.select"><span class="caret"></span></a>
+                            <ul class="dropdown-menu" id="alogListContainer">
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default" data-itrans="initmenu"></button>
+                                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false" tabindex="0"><span class="caret"></span></button>
+                                <form onsubmit="return false" class="form-vertical dropdown-menu" role="menu" id="alogControlPlaceHolder">
+
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="navbar" role="navigation">
+
+        <nav class="collapse navbar-collapse bs-navbar-collapse">
+
+            <ul class="nav navbar-nav">
+                <li>
+                    <button id="firstStepButton" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="..." onclick="controller.firstProgStep()" data-itrans="first"></button>
+                </li>
+                <li>
+                    <button id="prevStepButton" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="..." onclick="controller.prevProgStep()" data-itrans="prev"></button>
+                </li>
+                <li>
+                    <button id="nextStepButton" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="..." onclick="controller.nextProgStep()" data-itrans="next"></button>
+                </li>
+                <li>
+                    <button id="lastStepButton" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="..." onclick="controller.lastProgStep()" data-itrans="last"></button>
+                </li>
+                <li>
+                    <button id="playButton" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="..." onclick="controller.play()" data-itrans="play"></button>
+                </li>
+                <li>
+                    <button id="cancelButton" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="..." onclick="controller.stopPlay()" data-itrans="stop"></button>
+                </li>
+
+            </ul>
+        </nav>
+    </div>
+
+    <div id="main-container" class="container">
+        <div class="mainscreen">
+            <span data-itrans="hoverText"></span>
+            <div class="quarterblock">
+                <div class="workview"></div>
+                <div class="sourceview"></div>
+                <canvas width="600px" height="350px"></canvas>
+            </div>
+            <div>
+                <div id="disp" class="showblock"></div>
+                <div id="prog" class="showprog quarterblock"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script data-main="assets/js/config" src="assets/js/vendor/require.js"></script>
+
+</html>

@@ -1,0 +1,96 @@
+.amtable {
+    border-collapse: collapse;
+    width: 250px;
+    border: 1px solid red;
+}
+
+.amtable th {
+    height: 30px;
+    transition-duration: 0.5s;
+}
+
+.amtable tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+
+.amtable td {
+    position: relative;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    font-size: 1.2em;
+    transition: text;
+    transition-duration: 0.5s;
+}
+
+.amtable td div {
+    position: absolute;
+    display: inline;
+    color: transparent;
+    transition: color;
+    transition-duration: inherit;
+    font-size: 0px;
+}
+
+.amtable td:hover div {
+    top: -10px;
+    left: 30px;
+    border: 1px solid orange;
+    background: lightyellow;
+    color: blue;
+    font-size: inherit;
+}
+
+
+/**/
+
+
+/**/
+
+
+/**/
+
+.arrtable {
+    border-collapse: collapse;
+    width: 250px;
+    border: 1px solid red;
+}
+
+.arrtable tr th {
+    height: 30px;
+    transition-duration: 0.5s;
+    text-align: center;
+}
+
+.arrtable tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+
+.arrtable td {
+    position: relative;
+    text-align: center;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    font-size: 1.2em;
+    transition: text;
+    transition-duration: 0.5s;
+}
+
+.arrtable td div {
+    position: absolute;
+    display: inline;
+    color: transparent;
+    transition: color;
+    transition-duration: inherit;
+    font-size: 0px;
+}
+
+.arrtable td:hover div {
+    top: -10px;
+    left: 30px;
+    border: 1px solid orange;
+    background: lightyellow;
+    color: blue;
+    font-size: inherit;
+}
